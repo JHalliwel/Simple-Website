@@ -1,0 +1,95 @@
+/* ====== Reset básico ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Estilo general ====== */
+body {
+  margin: 40px auto;
+  max-width: 1400px;
+  width: 90%;
+  min-height: 100vh;
+  border: 5px solid rgb(72, 205, 49);
+  background-color: rgb(135, 206, 235);
+  font-family: Arial, sans-serif;
+}
+
+/* ====== Encabezado ====== */
+header {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 50px 0;
+  color: white;
+}
+
+/* ====== Sección principal ====== */
+#texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* centra verticalmente imagen y texto */
+  justify-content: space-between;
+  gap: 60px;
+  margin: 0 5%;
+}
+
+/* ====== Texto ====== */
+#texto p {
+  margin: 15px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: white;
+  max-width: 700px;
+}
+
+/* ====== Imagen ====== */
+#texto img {
+  width: 100%;
+  max-width: 300px; /* 🔹 Más grande y proporcional al estilo que muestras */
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ====== Contenedor ====== */
+.container {
+  text-align: center;
+  color: rgb(72, 205, 49);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 992px) {
+  #texto {
+    flex-direction: column-reverse; /* 🔹 Imagen debajo del texto en tablets */
+    text-align: center;
+  }
+
+  #texto img {
+    max-width: 550px;
+  }
+
+  header {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 20px;
+    border-width: 3px;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+
+  #texto img {
+    max-width: 380px; /* 🔹 Mantiene buena proporción en móviles */
+  }
+
+  #texto p {
+    font-size: 0.95rem;
+  }
+}
